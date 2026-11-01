@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-theme="day" data-size="m" data-explain="on" data-lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>太极拳论 · 逐句读懂</title>
+<meta name="description" content="王宗岳《太极拳论》全文，逐句白话疏解。把「无极而太极、走与粘、双重之病、舍己从人」一次讲清。">
+<link rel="stylesheet" href="css/styles.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="hd" id="hd">
+  <div class="hd__mark">
+    <span data-i18n="brand">太极拳论</span>
+    <small data-i18n="brandSub">王宗岳 · 逐句疏解</small>
+  </div>
+  <div class="hd__spacer"></div>
+  <div class="tools" role="group" aria-label="阅读设置" data-i18n-aria="tools.label">
+    <div class="lang">
+      <button type="button" class="lang__btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="语言" data-i18n-aria="lang.label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>
+        <span id="langCode">简</span>
+      </button>
+      <ul class="lang__menu" id="langMenu" role="listbox" aria-label="语言" hidden>
+        <li><button type="button" role="option" data-lang="zh-Hans" aria-selected="true">简体中文</button></li>
+        <li><button type="button" role="option" data-lang="zh-Hant" aria-selected="false">繁體中文</button></li>
+        <li><button type="button" role="option" data-lang="en" aria-selected="false">English</button></li>
+        <li><button type="button" role="option" data-lang="ja" aria-selected="false">日本語</button></li>
+        <li><button type="button" role="option" data-lang="ko" aria-selected="false">한국어</button></li>
+        <li><button type="button" role="option" data-lang="es" aria-selected="false">Español</button></li>
+        <li><button type="button" role="option" data-lang="fr" aria-selected="false">Français</button></li>
+        <li><button type="button" role="option" data-lang="de" aria-selected="false">Deutsch</button></li>
+      </ul>
+    </div>
+    <button type="button" id="fontDec" aria-label="减小字号">A−</button>
+    <button type="button" id="fontInc" aria-label="增大字号">A+</button>
+    <span class="divider" aria-hidden="true"></span>
+    <button type="button" id="expToggle" aria-pressed="true">译文</button>
+    <button type="button" id="themeToggle" aria-pressed="false">夜读</button>
+  </div>
+</header>
+
+<nav class="rail" aria-label="章节导航" data-i18n-aria="rail.label">
+  <a href="#brief"><span data-i18n="rail.brief">全篇骨架</span><i></i></a>
+  <a href="#ch1"><span data-i18n="rail.ch1">一 · 总纲</span><i></i></a>
+  <a href="#ch2"><span data-i18n="rail.ch2">二 · 次第</span><i></i></a>
+  <a href="#ch3"><span data-i18n="rail.ch3">三 · 身法</span><i></i></a>
+  <a href="#ch4"><span data-i18n="rail.ch4">四 · 辨伪</span><i></i></a>
+  <a href="#ch5"><span data-i18n="rail.ch5">五 · 双重</span><i></i></a>
+  <a href="#ch6"><span data-i18n="rail.ch6">六 · 归结</span><i></i></a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="top">
+  <div class="hero__copy">
+    <p class="hero__eyebrow eyebrow" data-i18n="hero.eyebrow">清 · 王宗岳</p>
+    <h1 data-i18n="hero.title">太极拳<em>论</em></h1>
+    <p class="hero__sub" data-i18n="hero.sub"></p>
+    <p class="hero__lead" data-i18n="hero.lead">
+      三百七十余字，把太极拳的<b>理、法、病、要</b>全部说完。
+      这里一句原文、一句白话，读完你就能和人讨论「什么是双重」。
+    </p>
+    <div class="hero__meta">
+      <span data-i18n="hero.m1">全文 25 句</span>
+      <span data-i18n="hero.m2">分 6 章</span>
+      <span data-i18n="hero.m3">约 12 分钟</span>
+    </div>
+    <a class="cta" href="#ch1">
+      <span data-i18n="hero.cta">开始逐句读</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+  <figure class="hero__art">
+    <figcaption data-i18n="hero.caption">无极而生</figcaption>
+    <svg class="taiji" viewBox="0 0 200 200" role="img" aria-label="太极图">
+      <circle cx="100" cy="100" r="99.4" fill="var(--paper)" stroke="currentColor" stroke-width="1"/>
+      <path d="M100,0 A50,50 0 0 0 100,100 A50,50 0 0 1 100,200 A100,100 0 0 0 100,0 Z" fill="currentColor"/>
+      <circle cx="100" cy="50" r="13" fill="var(--paper)"/>
+      <circle cx="100" cy="150" r="13" fill="currentColor"/>
+    </svg>
+    <div class="seal" aria-hidden="true" data-i18n="hero.seal">太极拳论</div>
+  </figure>
+
+  <div class="scrollhint" aria-hidden="true"><i></i><span data-i18n="hero.scroll">向下</span></div>
+</section>
+
+<!-- ============ BRIEF ============ -->
+<section class="sec wrap" id="brief">
+  <div class="sec__head reveal">
+    <p class="sec__no" data-i18n="brief.no">导读</p>
+    <div>
+      <h2 class="sec__title" data-i18n="brief.title">全篇只讲四件事</h2>
+      <p class="sec__sub" data-i18n="brief.sub">
+        这篇论不是招式谱，而是一条推理链：先说理从哪来，再说怎么用，接着指出最常见的病，最后归到一个字——「让」。
+      </p>
+    </div>
+  </div>
+
+  <div class="skel">
+    <a class="skel__item reveal" href="#ch1">
+      <h3 class="skel__zh" data-i18n="brief.c1t">立论</h3>
+      <p class="skel__p" data-i18n="brief.c1p">无极生太极，一动分阴阳。所以出手要有分寸，不能过，也不能不及。</p>
+      <span class="skel__n" data-i18n="brief.c1n">第 1—6 句</span>
+    </a>
+    <a class="skel__item reveal" href="#s04">
+      <h3 class="skel__zh" data-i18n="brief.c2t">技法</h3>
+      <p class="skel__p" data-i18n="brief.c2p">人刚我柔叫走，我顺人背叫粘。走是化掉，粘是控住，两件事其实是一件事。</p>
+      <span class="skel__n" data-i18n="brief.c2n">第 4、22 句</span>
+    </a>
+    <a class="skel__item reveal" href="#ch5">
+      <h3 class="skel__zh" data-i18n="brief.c3t">破病</h3>
+      <p class="skel__p" data-i18n="brief.c3p">最要命的病是「双重」：虚实不分、两处都实，一碰就滞住，练多少年也化不动。</p>
+      <span class="skel__n" data-i18n="brief.c3n">第 19—21 句</span>
+    </a>
+    <a class="skel__item reveal" href="#ch6">
+      <h3 class="skel__zh" data-i18n="brief.c4t">归宗</h3>
+      <p class="skel__p" data-i18n="brief.c4p">舍己从人。放下自己的主张，顺着对方的势走——听起来最笨，其实最近。</p>
+      <span class="skel__n" data-i18n="brief.c4n">第 24—25 句</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ TEXT ============ -->
+<main class="sec wrap" id="read">
+
+  <div class="sec__head reveal">
+    <p class="sec__no" data-i18n="read.no">正文</p>
+    <div>
+      <h2 class="sec__title" data-i18n="read.title">一句一句读</h2>
+      <p class="sec__sub" data-i18n="read.sub">
+        原文依通行本，用简体；译文用白话。点任意一句可展开或收起它的意思，再点一次收起；右上角可一键全显或全隐，也可以切换语言。
+      </p>
+    </div>
+  </div>
+
+  <!-- 一 -->
+  <section class="chapter" id="ch1">
+    <div class="chapter__head reveal">
+      <p class="chapter__no" data-i18n="ch1.no">第一章</p>
+      <h3 class="chapter__title" data-i18n="ch1.title">总纲</h3>
+      <p class="chapter__note" data-i18n="ch1.note">1 — 6 句 · 理从哪来</p>
+    </div>
+
+    <article class="s reveal" id="s01" data-open="true">
+      <p class="s__num">01</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s01.o">太极者，无极而生，阴阳之母也。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s01.e">「无极」是浑然一片、未分动静的状态；太极由它而生，又是阴阳的源头。拳的根在「一」，一切变化都从这一体里生出来。</p>
+        <p class="s__key" data-i18n="s01.k">拳的根在「一」</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s02" data-open="true">
+      <p class="s__num">02</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s02.o">动之则分，静之则合。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s02.e">一动就分出阴阳：虚实、刚柔、开合；一静又合回一体。所以动不是乱动，是在「分」与「合」之间来回。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s03" data-open="true">
+      <p class="s__num">03</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s03.o">无过不及，随曲就伸。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s03.e">不超越、不欠缺，恰到好处；对方屈我就屈，对方伸我就伸——顺着他的形走，不加一分，不减一分。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s04" data-open="true">
+      <p class="s__num">04</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s04.o">人刚我柔谓之走，我顺人背谓之粘。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s04.e">他来刚力，我用柔把他引偏、化空，这叫「走」；我顺他的势，让他处在使不上劲的「背」势，这叫「粘」。走是化，粘是控。</p>
+        <p class="s__key" data-i18n="s04.k">走是化，粘是控</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s05" data-open="true">
+      <p class="s__num">05</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s05.o">动急则急应，动缓则缓随。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s05.e">他快我快，他慢我慢。节奏跟着他，不抢先，也不落后。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s06" data-open="true">
+      <p class="s__num">06</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s06.o">虽变化万端，而理为一贯。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s06.e">招式千变万化，背后只有一个理：阴阳相济、舍己从人。抓住这一理，万变都在其中。</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 二 -->
+  <section class="chapter" id="ch2">
+    <div class="chapter__head reveal">
+      <p class="chapter__no" data-i18n="ch2.no">第二章</p>
+      <h3 class="chapter__title" data-i18n="ch2.title">次第</h3>
+      <p class="chapter__note" data-i18n="ch2.note">7 — 8 句 · 三级台阶</p>
+    </div>
+
+    <article class="s reveal" id="s07" data-open="true">
+      <p class="s__num">07</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s07.o">由招熟而渐悟懂劲，由懂劲而阶及神明。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s07.e">三级台阶：先把招式练熟 → 渐渐明白「劲」是什么 → 再由懂劲一级一级走到「神明」，也就是不假思索、随心所欲。</p>
+        <p class="s__key" data-i18n="s07.k">招熟 → 懂劲 → 神明</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s08" data-open="true">
+      <p class="s__num">08</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s08.o">然非用力日久，不能豁然贯通焉。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s08.e">但不下长期功夫，不会有一天忽然贯通。这里的「用力」是用功、下功夫，不是使拙力。</p>
+        <p class="s__key" data-i18n="s08.k">「用力」＝用功</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 三 -->
+  <section class="chapter" id="ch3">
+    <div class="chapter__head reveal">
+      <p class="chapter__no" data-i18n="ch3.no">第三章</p>
+      <h3 class="chapter__title" data-i18n="ch3.title">身法与听劲</h3>
+      <p class="chapter__note" data-i18n="ch3.note">9 — 14 句 · 身上怎么长东西</p>
+    </div>
+
+    <article class="s reveal" id="s09" data-open="true">
+      <p class="s__num">09</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s09.o">虚灵顶劲，气沉丹田。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s09.e">头顶像有一线轻轻提住，精神提起；气往下沉到小腹丹田。一上一下对拉，一身才整。</p>
+        <p class="s__key" data-i18n="s09.k">上下对拉</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s10" data-open="true">
+      <p class="s__num">10</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s10.o">不偏不倚，忽隐忽现。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s10.e">身法中正，不歪不倒；虚实变化让人捉摸不定，忽藏忽露。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s11" data-open="true">
+      <p class="s__num">11</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s11.o">左重则左虚，右重则右杳。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s11.e">左边被压重，左边就化空；右边被压重，右边就消隐。「杳」是深隐不见——重的地方偏偏不给力，让他落空。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s12" data-open="true">
+      <p class="s__num">12</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s12.o">仰之则弥高，俯之则弥深，进之则愈长，退之则愈促。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s12.e">他往上打，觉得我更高；往下打，觉得我更深；往前推，觉得我更长；往后退，觉得更逼促。怎么找，都找不到实处。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s13" data-open="true">
+      <p class="s__num">13</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s13.o">一羽不能加，蝇虫不能落，人不知我，我独知人。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s13.e">轻到一根羽毛、一只苍蝇都落不住——身上极灵，一触即知即化。他摸不清我的虚实，我却清楚他的虚实。</p>
+        <p class="s__key" data-i18n="s13.k">人不知我，我独知人</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s14" data-open="true">
+      <p class="s__num">14</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s14.o">英雄所向无敌，盖皆由此而及也。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s14.e">所谓无敌，就是从这条路走到的，没有别的捷径。</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 四 -->
+  <section class="chapter" id="ch4">
+    <div class="chapter__head reveal">
+      <p class="chapter__no" data-i18n="ch4.no">第四章</p>
+      <h3 class="chapter__title" data-i18n="ch4.title">辨旁门</h3>
+      <p class="chapter__note" data-i18n="ch4.note">15 — 18 句 · 不靠力，不靠快</p>
+    </div>
+
+    <article class="s reveal" id="s15" data-open="true">
+      <p class="s__num">15</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s15.o">斯技旁门甚多，虽势有区别，概不外壮欺弱，慢让快耳。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s15.e">这门功夫旁支很多，姿势各有不同，但大体不出「壮的欺负弱的、慢的输给快的」。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s16" data-open="true">
+      <p class="s__num">16</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s16.o">有力打无力，手慢让手快，<br>是皆先天自然之能，非关学力而有为也。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s16.e">力大打力小、手快胜手慢，这是人与生俱来的本能，跟学问功夫无关——那不是太极拳讲的「技」。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s17" data-open="true">
+      <p class="s__num">17</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s17.o">察四两拨千斤之句，显非力胜；</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s17.e">看「四两拨千斤」这句话，显然不是靠力大取胜。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s18" data-open="true">
+      <p class="s__num">18</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s18.o">观耄耋御众之形，快何能为。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s18.e">看八九十岁的老人抵挡众人，快又有什么用？胜负根本不在力与快。</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 五 -->
+  <section class="chapter" id="ch5">
+    <div class="chapter__head reveal">
+      <p class="chapter__no" data-i18n="ch5.no">第五章</p>
+      <h3 class="chapter__title" data-i18n="ch5.title">双重之病</h3>
+      <p class="chapter__note" data-i18n="ch5.note">19 — 22 句 · 全篇最要紧处</p>
+    </div>
+
+    <article class="s reveal" id="s19" data-open="true">
+      <p class="s__num">19</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s19.o">立如秤准，活如车轮，偏沉则随，双重则滞。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s19.e">站得像秤杆一样中正灵敏（「秤准」一作「平准」，指天平），转起来像车轮一样圆活。一处偏沉，就随它转；两处都实，就是「双重」，立刻滞住。</p>
+        <p class="s__key" data-i18n="s19.k">偏沉则随，双重则滞</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s20" data-open="true">
+      <p class="s__num">20</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s20.o">每见数年纯功，不能运化者，<br>率皆自为人制，双重之病未悟尔。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s20.e">常见练了多年纯功却化不动的人，多半是自己被人制住，原因就是没悟到「双重」这个病。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s21" data-open="true">
+      <p class="s__num">21</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s21.o">欲避此病，须知阴阳；</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s21.e">要避开这个病，必须懂阴阳：虚实、刚柔、开合，要分得清。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s22" data-open="true">
+      <p class="s__num">22</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s22.o">粘即是走，走即是粘，阳不离阴，阴不离阳；阴阳相济，方为懂劲。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s22.e">粘里有走，走里有粘，本是一件事；阳不离阴，阴不离阳，两者相济，才叫懂劲。</p>
+        <p class="s__key" data-i18n="s22.k">粘走是一件事</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 六 -->
+  <section class="chapter" id="ch6">
+    <div class="chapter__head reveal">
+      <p class="chapter__no" data-i18n="ch6.no">第六章</p>
+      <h3 class="chapter__title" data-i18n="ch6.title">归结</h3>
+      <p class="chapter__note" data-i18n="ch6.note">23 — 25 句 · 舍己从人</p>
+    </div>
+
+    <article class="s reveal" id="s23" data-open="true">
+      <p class="s__num">23</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s23.o">懂劲后，愈练愈精，默识揣摩，渐至从心所欲。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s23.e">懂劲之后越练越精，心里默默体会揣摩，慢慢到随心所欲。</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s24" data-open="true">
+      <p class="s__num">24</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s24.o">本是舍己从人，多误舍近求远。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s24.e">这本是「放下自己的主张、顺从对方」的功夫；多数人错在放着近的（自身、眼前这一点）不去求，偏去求远的玄虚。</p>
+        <p class="s__key" data-i18n="s24.k">舍己从人</p>
+      </div>
+    </article>
+
+    <article class="s reveal" id="s25" data-open="true">
+      <p class="s__num">25</p>
+      <div>
+        <button type="button" class="s__orig" aria-expanded="true"><span data-i18n="s25.o">所谓差之毫厘，谬以千里。<br>学者不可不详辨焉。是为论。</span><span class="s__cue" aria-hidden="true"></span></button>
+        <p class="s__exp" data-i18n="s25.e">差一丝一毫，结果就差到千里之外。学的人不可不仔细分辨。全论到此为止。</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<!-- ============ SUMMARY ============ -->
+<section class="sec sum" id="sum">
+  <div class="wrap">
+    <div class="sec__head reveal">
+      <p class="sec__no" data-i18n="sum.no">结语</p>
+      <div>
+        <h2 class="sec__title" data-i18n="sum.title">三句话收起来</h2>
+        <p class="sec__sub" data-i18n="sum.sub">如果只记三句，记这三句。</p>
+      </div>
+    </div>
+
+    <div class="sum__list">
+      <div class="sum__item reveal">
+        <p class="sum__txt" data-i18n="sum.1t">
+          一动就分阴阳，一静就合回一体，所以出手要「无过不及」。
+          <small>这是理。拳里所有的虚实、刚柔、开合，都是这一条长出来的。</small>
+        </p>
+      </div>
+      <div class="sum__item reveal">
+        <p class="sum__txt" data-i18n="sum.2t">
+          人来刚我用走，人处背我用粘；粘走本是一事，关键在「偏沉则随」，最忌「双重则滞」。
+          <small>这是法。练了多年化不动，多半不是功夫不够，是虚实没分。</small>
+        </p>
+      </div>
+      <div class="sum__item reveal">
+        <p class="sum__txt" data-i18n="sum.3t">
+          舍己从人，愈练愈精，终至从心所欲。
+          <small>这是归宿。放弃「我要赢」，才可能真的赢——全篇最后落在这四个字上。</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOSSARY ============ -->
+<section class="sec wrap" id="gloss">
+  <div class="sec__head reveal">
+    <p class="sec__no" data-i18n="gloss.no">附录</p>
+    <div>
+      <h2 class="sec__title" data-i18n="gloss.title">十个词，读懂全篇</h2>
+      <p class="sec__sub" data-i18n="gloss.sub">这些字在文中反复出现，先把它们弄明白，读起来就顺了。</p>
+    </div>
+  </div>
+
+  <dl class="gloss">
+    <div class="gloss__item reveal">
+      <dt data-i18n="g1t">无极</dt>
+      <dd data-i18n="g1d">浑然一气、未分动静的状态。太极由它而生，所以它是「零」，不是「一」。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g2t">走</dt>
+      <dd data-i18n="g2d">对方来刚力，我用柔把它引偏、化空，不顶不抗。走是「化」。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g3t">粘</dt>
+      <dd data-i18n="g3d">黏住对方，不让他脱开，让他一直处在使不上劲的背势。粘是「控」。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g4t">懂劲</dt>
+      <dd data-i18n="g4d">听得出对方劲路的虚实、刚柔、方向，并且能顺势化发，不靠想。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g5t">神明</dt>
+      <dd data-i18n="g5d">不假思索、随心所欲的境界。不是玄学，是熟练到不用过脑子的状态。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g6t">双重</dt>
+      <dd data-i18n="g6d">虚实不分、两处俱实。手是实的、脚也是实的，一碰就滞住，转不动。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g7t">偏沉</dt>
+      <dd data-i18n="g7d">一处偏虚偏沉，反而能随对方转动。与「双重」正好相反，是活的。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g8t">秤准</dt>
+      <dd data-i18n="g8d">一作「平准」，指天平、秤杆。喻身法中正而灵敏，毫厘之差都称得出来。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g9t">耄耋</dt>
+      <dd data-i18n="g9d">八九十岁的老人。文中用来反问：老人赢壮汉，靠的显然不是快。</dd>
+    </div>
+    <div class="gloss__item reveal">
+      <dt data-i18n="g10t">舍己从人</dt>
+      <dd data-i18n="g10d">放下自己的主张，顺从对方的势。全篇的落脚点，也是最难做到的一句。</dd>
+    </div>
+  </dl>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ft">
+  <div class="wrap ft__in">
+    <p class="ft__q" data-i18n="foot.quote">本是舍己从人，<br>多误舍近求远。</p>
+    <p class="ft__meta">
+      <span data-i18n="foot.m1">原文：王宗岳《太极拳论》，世亦称《太极拳经》</span><br>
+      <span data-i18n="foot.m2">释文为便于初学所作的白话疏解，非唯一正解</span><br>
+      <span data-i18n="foot.m3">排版 · 现代编辑式阅读</span>
+    </p>
+  </div>
+</footer>
+
+<script src="js/lang/zh-Hant.js"></script>
+<script src="js/lang/en.js"></script>
+<script src="js/lang/ja.js"></script>
+<script src="js/lang/ko.js"></script>
+<script src="js/lang/es.js"></script>
+<script src="js/lang/fr.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
